@@ -11,13 +11,13 @@ public class Car extends Vehicle {
 
     @Override
     public double getRange() {
-        double totalFuelConsumption = getAvgFuelConsumption();
+        double totalFuelConsumption = avgFuelConsumption;
 
         if (airConditioningOn) {
             totalFuelConsumption += AC_FUEL_CONSUMPTION;
         }
 
-        return getTankCapacity() / totalFuelConsumption * 100;
+        return tankCapacity / totalFuelConsumption * 100;
     }
 
     @Override

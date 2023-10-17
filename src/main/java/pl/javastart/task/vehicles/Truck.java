@@ -12,13 +12,13 @@ public class Truck extends Car {
 
     @Override
     public double getRange() {
-        double totalFuelConsumption = getAvgFuelConsumption() + cargoWeight / 100 * WEIGHT_FUEL_CONSUMPTION;
+        double totalFuelConsumption = avgFuelConsumption + cargoWeight / 100 * WEIGHT_FUEL_CONSUMPTION;
 
         if (isAirConditioningOn()) {
             totalFuelConsumption += AC_FUEL_CONSUMPTION;
         }
 
-        return getTankCapacity() / totalFuelConsumption * 100;
+        return tankCapacity / totalFuelConsumption * 100;
     }
 
     @Override
